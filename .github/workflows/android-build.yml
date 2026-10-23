@@ -2,7 +2,9 @@ name: Manga XW Android APK
 
 on:
   push:
-    branches: [main]
+    branches:
+      - '**'
+  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -24,8 +26,9 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
-      - name: Setup Keystore
+      - name: Setup Keystore and Environment
         run: |
+          touch .env
           if [ -f debug.keystore.base64 ]; then
             base64 -d debug.keystore.base64 > debug.keystore
           fi
@@ -33,7 +36,7 @@ jobs:
       - name: Build Debug APK
         run: |
           chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon --stacktrace
+          ./gradlew assembleDebug --no-daemon --no-configuration-cache --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
@@ -41,3 +44,4 @@ jobs:
           name: Manga-XW-Debug-APK
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
+
