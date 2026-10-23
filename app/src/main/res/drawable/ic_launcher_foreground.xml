@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Left Manga Page wing (Cyan Glow) -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M52,38 C44,38 34,35 28,33 C27.5,33 27,33.5 27,34.2 L27,71 C33,73 43,76 52,76 Z" />
+    <!-- Right Manga Page wing (Electric Blue Glow) -->
+    <path
+        android:fillColor="#2979FF"
+        android:pathData="M56,38 C64,38 74,35 80,33 C80.5,33 81,33.5 81,34.2 L81,71 C75,73 65,76 56,76 Z" />
+    <!-- Center Spine & Core Glow -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M52.5,37 L55.5,37 L55.5,77 L52.5,77 Z" />
+    <!-- Crimson accent slash (representing XW blood-moon fusion) -->
+    <path
+        android:strokeColor="#FF1744"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M42,47 L66,67 M66,47 L42,67" />
+    <!-- Top Sparkle / Crown Accent -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M54,27 L56,32 L61,34 L56,36 L54,41 L52,36 L47,34 L52,32 Z" />
+</vector>
